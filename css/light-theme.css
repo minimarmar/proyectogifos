@@ -1,0 +1,422 @@
+.light-theme, body {
+    color: #110038;
+    background-color: #fff4fd;
+}
+
+.light-theme a {
+    color: #110038;
+    text-decoration: none;
+}
+
+.light-theme .nav-bar {
+    color: white;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    box-shadow: 1px 1px black;
+}
+
+.light-theme .logo {
+    background: no-repeat url(../images/gifOF_logo.png);
+}
+
+.light-theme .dots:hover {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+.light-theme .dots:active {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+.light-theme .header-button {
+    background: #F7C9F3;
+    color: #110038;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+
+.light-theme .select-theme{
+    background: #F7C9F3;
+    color: #110038;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .dots-theme:hover {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+.light-theme .dots-theme:active {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+
+.light-theme .button-themes {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme #day {
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+
+.light-theme #day:active{
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme #day:active::first-letter {
+    text-decoration: underline;
+}
+
+.light-theme #night {
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme #night:active{
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme #night:active::first-letter {
+    text-decoration: underline;
+}
+
+.light-theme #dropdown {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+.light-theme .dots-dropdown:hover {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+.light-theme .dots-dropdown:active {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+    background-color: #E6BBE2;
+}
+
+.light-theme .arrow {
+    background-image: url(../images/dropdown.svg);
+}
+
+.light-theme .header-link {
+    color: #110038;
+}
+
+.header-link:active{
+    color: grey;
+}
+
+.light-theme .dots-link:hover {
+    border: 1px dotted #110038;
+    box-sizing: border-box;
+}
+
+/* Search Container */
+
+.light-theme .box-header {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: white;
+}
+
+.light-theme .search-container {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .search-button {
+    color: #B4B4B4;
+    background: #E6E6E6;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .button-active {
+    background: #E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .search-button:active {
+    color: #110038;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .button-active .dotted-button .lupa {
+    background-image: url(../images/lupa.svg);
+}
+
+.light-theme .lupa {
+    background-image: url(../images/lupa_inactive.svg);
+}
+
+.light-theme .search-button:active .lupa {
+    background-image: url(../images/lupa.svg);
+}
+
+.light-theme .button-active .lupa {
+    background-image: url(../images/lupa.svg);
+}
+
+/*Sugerencias de búsqueda*/
+
+.light-theme .search-suggestion-wrapper {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .suggest-dots {
+    background-color: #DBDBDB;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    border: 1px dotted #110038;
+}
+
+.light-theme .search-result {
+    background: #F0F0F0;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/*Suggestions container*/
+
+.light-theme .title-box {
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.light-theme .box-suggestions {
+    background: #E6E6E6;    
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.light-theme .hashtag {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: #FFFFFF;
+}
+
+.light-theme .title-result {
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+}
+
+.light-theme .see-more{
+    background: #4180F6;    
+    border: 1px solid #4C2F99;  
+    box-shadow: inset -1px -1px 0 0 #284F99, inset 1px 1px 0 0 #FFFFFF;
+    color: #FFFFFF;
+}
+
+.light-theme .see-more:hover {
+    background: #3A72DB;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .hashtag-bottom {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: #FFFFFF;
+}
+
+/* Boton tags relacionados */
+
+.light-theme .btn-related {
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -1px -1px 0 0 #284F99, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/* Ventana para crear gifos: loading Window*/
+
+.light-theme .loading-window {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .window-title {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: #FFFFFF;
+}
+
+.light-theme .cancel {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .start {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/* Capture */
+
+.light-theme .capture {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .capture-title {
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: #FFFFFF;
+}
+
+.light-theme .button-capture-img {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .not-recording {
+    background: no-repeat url(../images/camera.svg);
+}
+
+.light-theme .box-recording {
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .button-capture {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .recording {
+    background: no-repeat url(../images/recording.svg);
+}
+
+.light-theme .ready {
+    background: #FF6161;    
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* Botones de interacción de Captura */
+
+.light-theme .uploadGif {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+.light-theme .uploadGif:active {
+    background: #F0E5EE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+/* Carga éxitosa del gif*/
+
+.light-theme .success-upload {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.light-theme .success-title{
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: #FFFFFF;
+}
+
+.light-theme .success {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+.light-theme .success:active {
+    background: #F0E5EE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+.light-theme .gif-ready {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .gif-ready:active {
+    background: #E6BBE2;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.light-theme .fwd-btn {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+/* Subir Gifo*/
+
+.light-theme #cancel-btn {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+.light-theme #cancel-btn:active {
+    background: #F0E5EE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    color: #110038;
+}
+
+/* ProgressBar */
+
+.light-theme .progress-bar {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #FFFCFC, inset 2px 2px 0 0 #000000;
+}
+
+.light-theme .progress-bar-item {
+    background: #999999;
+}
+
+.light-theme .progress-bar-item-active {
+    background: #F7C9F3;
+}
+
+/* Playbar */
+
+.light-theme .playbar {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #FFFCFC, inset 2px 2px 0 0 #000000;
+}
+
+.light-theme .playbar-item {
+    background: #999999;
+}
+
+.light-theme .playbar-item-on {
+    background: #F7C9F3;
+}
