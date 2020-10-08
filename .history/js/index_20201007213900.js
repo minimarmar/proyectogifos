@@ -216,6 +216,7 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')

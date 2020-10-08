@@ -216,6 +216,7 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')
@@ -265,6 +266,10 @@ searchBar.addEventListener('input', event => {
         })
     })
     suggestionWrapper.classList.remove('hidden')
+})
+
+searchResult.addEventListener('click', () => {
+    autoComplete();
 })
 
 /* Accion sobre los botones grises: Suggestions Results*/

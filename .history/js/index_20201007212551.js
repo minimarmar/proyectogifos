@@ -20,7 +20,7 @@ const pageResults = document.getElementsByClassName('page-results')[0];
 const btnRelated = document.getElementsByClassName('btn')[0];
 //const btnChild = document.getElementsByClassName('btn-related')[0];
 const searchResult = document.getElementsByClassName('search-result')[0];
-const suggestionsResults = document.getElementsByClassName('suggestions-result')[0];
+const suggestionsResults = document.getElementsByClassName ('suggestions-result')[0];
 
 /* Cambio  de tema */
 
@@ -216,6 +216,7 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')
@@ -223,10 +224,10 @@ searchButton.addEventListener('click', () => {
     }
 
     autoComplete(searchBar.value).then((resultado) => {
-        btnRelated.innerHTML = '';
         resultado.forEach((item) => {
             let search = document.createElement('div')
-            search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`
+            //search.classList.add('btn-related')
+            search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${ item.word }</div>`
             btnRelated.appendChild(search);
         })
     })
@@ -256,7 +257,7 @@ searchBar.addEventListener('input', event => {
     }
 
     autoComplete(searchBar.value).then((resultado) => {
-        suggestionWrapper.innerHTML = '';
+        suggestionWrapper.innerHTML ='';
         resultado.forEach((item) => {
             let search = document.createElement('div')
             search.classList.add('search-result')
@@ -264,6 +265,8 @@ searchBar.addEventListener('input', event => {
             suggestionWrapper.appendChild(search);
         })
     })
+
+
     suggestionWrapper.classList.remove('hidden')
 })
 

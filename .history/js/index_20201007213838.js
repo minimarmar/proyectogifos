@@ -216,6 +216,7 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')
@@ -263,40 +264,64 @@ searchBar.addEventListener('input', event => {
             search.innerHTML = `<div class="another-result" data-search=${item.word}>#${item.word}</div>`
             suggestionWrapper.appendChild(search);
         })
+        searchResult.addEventListener('click', () => {
+            autoComplete(searchBar.value).then((resultado) => {
+                btnRelated.innerHTML = '';
+                resultado.forEach((item) => {
+                    let search = document.createElement('div')
+                    search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`
+                    btnRelated.appendChild(search);
+                })
+            })
+        })
+        suggestionWrapper.classList.remove('hidden')
     })
-    suggestionWrapper.classList.remove('hidden')
-})
 
-/* Accion sobre los botones grises: Suggestions Results*/
+    /* Accion sobre los botones grises: Suggestions Results*/
 
-suggestionWrapper.addEventListener('mousedown', e => {
-    searchAndAppendGifs(e.target.dataset.search)
-    suggestionWrapper.classList.add('hidden');
-    btnRelated.classList.remove('hidden')
-    btnRelated.classList.add('btn')
-    btnRelated.style.display = "flex";
-})
+    suggestionWrapper.addEventListener('mousedown', e => {
+        searchAndAppendGifs(e.target.dataset.search)
+        suggestionWrapper.classList.add('hidden');
+        btnRelated.classList.remove('hidden')
+        btnRelated.classList.add('btn')
+        btnRelated.style.display = "flex";
+    })
 
-searchBar.addEventListener('blur', () => {
-    suggestionWrapper.classList.add('hidden');
-})
+    searchBar.addEventListener('blur', () => {
+        suggestionWrapper.classList.add('hidden');
+    })
 
-searchBar.addEventListener('input', () => {
-    if (searchBar.value) {
-        searchButton.classList.remove('search-button');
-        searchButton.classList.add('button-active');
-    } else {
-        searchButton.classList.remove('button-active');
-        searchButton.classList.add('search-button');
+    searchBar.addEventListener('input', () => {
+        if (searchBar.value) {
+            searchButton.classList.remove('search-button');
+            searchButton.classList.add('button-active');
+        } else {
+            searchButton.classList.remove('button-active');
+            searchButton.classList.add('search-button');
+        }
+    })
+
+
+    /* Función para traer los gif*/
+
+    function getSearchResults(search) {
+        const found =
+            fetch('https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=' + apiKey)
+                .then((response) => {
+                    return response.json()
+                }).then(data => {
+                    return data
+                })
+                .catch((error) => {
+                    return error
+                })
+        return found
     }
-})
 
+    /* Funcion para resultados de Tendencias */
 
-/* Función para traer los gif*/
-
-function getSearchResults(search) {
-    const found =
-        fetch('https://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=' + apiKey)
+    function getTrendsResults() {
+        const found = fetch('https://api.giphy.com/v1/gifs/trending?api_key=' + apiKey)
             .then((response) => {
                 return response.json()
             }).then(data => {
@@ -305,21 +330,6 @@ function getSearchResults(search) {
             .catch((error) => {
                 return error
             })
-    return found
-}
-
-/* Funcion para resultados de Tendencias */
-
-function getTrendsResults() {
-    const found = fetch('https://api.giphy.com/v1/gifs/trending?api_key=' + apiKey)
-        .then((response) => {
-            return response.json()
-        }).then(data => {
-            return data
-        })
-        .catch((error) => {
-            return error
-        })
-    return found
-}
+        return found
+    }
 

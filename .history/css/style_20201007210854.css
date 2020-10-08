@@ -584,11 +584,10 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 1%;
     color: white;
     margin-right: 8px;
-    
+    padding-right: 1%;
 }
 
 /* Ventana para crear gifos: loading Window*/

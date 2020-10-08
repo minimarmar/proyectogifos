@@ -338,15 +338,7 @@ header {
     align-items: center;
 }
 
-.another-result {
-    width: 88%;
-    height: 36px;
-    padding-left: 1%;
-    display: flex;
-    align-items: center;
-}
-
-.another-result:hover {
+.suggest-dots {
     width: 98.5%;
     height: 32px;
     display: flex;
@@ -354,6 +346,14 @@ header {
     border: 1px dotted #110038;
     padding-left: 1%;
     margin-left: 1px;
+}
+
+.another-result {
+    width: 88%;
+    height: 36px;
+    padding-left: 1%;
+    display: flex;
+    align-items: center;
 }
 
 .hidden {
@@ -584,11 +584,10 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 1%;
     color: white;
     margin-right: 8px;
-    
+    padding-right: 1%;
 }
 
 /* Ventana para crear gifos: loading Window*/

@@ -216,6 +216,7 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')
@@ -223,7 +224,6 @@ searchButton.addEventListener('click', () => {
     }
 
     autoComplete(searchBar.value).then((resultado) => {
-        btnRelated.innerHTML = '';
         resultado.forEach((item) => {
             let search = document.createElement('div')
             search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`

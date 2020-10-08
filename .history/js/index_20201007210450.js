@@ -18,9 +18,8 @@ const trendsContainer = document.getElementsByClassName('trends-container')[0];
 const trendsElement = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 const pageResults = document.getElementsByClassName('page-results')[0];
 const btnRelated = document.getElementsByClassName('btn')[0];
-//const btnChild = document.getElementsByClassName('btn-related')[0];
+const btnChild = document.getElementsByClassName('btn-related')[0];
 const searchResult = document.getElementsByClassName('search-result')[0];
-const suggestionsResults = document.getElementsByClassName('suggestions-result')[0];
 
 /* Cambio  de tema */
 
@@ -153,7 +152,7 @@ function autoComplete(relacionados) {
             console.log(respuesta)
             return respuesta;
         })
-        .catch((error) => {
+        .catch((error)=>{
             return error;
         })
     return word;
@@ -216,20 +215,12 @@ function searchAndAppendGifs(searchText) {
 /* Botones de sugerencias post click de busqueda */
 
 searchButton.addEventListener('click', () => {
+
     if (searchBar.value) {
         btnRelated.classList.remove('hidden')
         btnRelated.classList.add('btn')
         btnRelated.style.display = "flex";
     }
-
-    autoComplete(searchBar.value).then((resultado) => {
-        btnRelated.innerHTML = '';
-        resultado.forEach((item) => {
-            let search = document.createElement('div')
-            search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`
-            btnRelated.appendChild(search);
-        })
-    })
 })
 
 btnRelated.addEventListener("click", (evento) => {
@@ -255,14 +246,11 @@ searchBar.addEventListener('input', event => {
         searchButton.classList.add('button-disabled')
     }
 
-    autoComplete(searchBar.value).then((resultado) => {
-        suggestionWrapper.innerHTML = '';
-        resultado.forEach((item) => {
-            let search = document.createElement('div')
-            search.classList.add('search-result')
-            search.innerHTML = `<div class="another-result" data-search=${item.word}>#${item.word}</div>`
-            suggestionWrapper.appendChild(search);
-        })
+    autoComplete(searchBar.value).forEach((item)=>{
+        let search = document.createElement('div')
+        search.classList.add('search-result')
+        search.innerHTML = `<div class="another-result" data-search=${item.word}>#${item.word}</div>`
+        suggestionWrapper.appendChild(search);
     })
     suggestionWrapper.classList.remove('hidden')
 })
