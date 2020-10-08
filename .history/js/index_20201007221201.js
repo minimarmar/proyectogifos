@@ -275,6 +275,10 @@ searchBar.addEventListener('input', event => {
     suggestionWrapper.classList.remove('hidden')
 })
 
+suggestionWrapper.addEventListener('click', (evento) => {
+    debugger
+    
+})
 
 /* Accion sobre los botones grises: Suggestions Results*/
 
@@ -284,6 +288,21 @@ suggestionWrapper.addEventListener('mousedown', e => {
     btnRelated.classList.remove('hidden')
     btnRelated.classList.add('btn')
     btnRelated.style.display = "flex";
+    if (evento.target.dataset.search) {
+        btnRelated.classList.remove('hidden')
+        btnRelated.classList.add('btn')
+        btnRelated.style.display = "flex";
+    }
+    searchAndAppendGifs(evento.target.dataset.search)
+    autoComplete(evento.target.dataset.search).then((resultado) => {
+        
+        btnRelated.innerHTML = '';
+        resultado.forEach((item) => {
+            let search = document.createElement('div')
+            search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`
+            btnRelated.appendChild(search);
+        })
+    })
 })
 
 searchBar.addEventListener('blur', () => {

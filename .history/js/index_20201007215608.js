@@ -234,7 +234,7 @@ searchButton.addEventListener('click', () => {
 
 btnRelated.addEventListener("click", (evento) => {
     searchAndAppendGifs(evento.target.dataset.search)
-    autoComplete(evento.target.dataset.search).then((resultado) => {
+    autoComplete(searchBar.value).then((resultado) => {
         btnRelated.innerHTML = '';
         resultado.forEach((item) => {
             let search = document.createElement('div')
@@ -274,7 +274,6 @@ searchBar.addEventListener('input', event => {
     })
     suggestionWrapper.classList.remove('hidden')
 })
-
 
 /* Accion sobre los botones grises: Suggestions Results*/
 

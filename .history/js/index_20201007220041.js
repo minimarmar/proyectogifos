@@ -275,6 +275,18 @@ searchBar.addEventListener('input', event => {
     suggestionWrapper.classList.remove('hidden')
 })
 
+suggestionWrapper.addEventListener('click', () => {
+    searchAndAppendGifs(evento.target.dataset.search)
+    autoComplete(evento.target.dataset.search).then((resultado) => {
+        suggestionWrapper.innerHTML = '';
+        resultado.forEach((item) => {
+            let search = document.createElement('div')
+            search.classList.add('search-result')
+            search.innerHTML = `<div class="another-result" data-search=${item.word}>#${item.word}</div>`
+            suggestionWrapper.appendChild(search);
+        })
+    })
+})
 
 /* Accion sobre los botones grises: Suggestions Results*/
 

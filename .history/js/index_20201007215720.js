@@ -275,7 +275,6 @@ searchBar.addEventListener('input', event => {
     suggestionWrapper.classList.remove('hidden')
 })
 
-
 /* Accion sobre los botones grises: Suggestions Results*/
 
 suggestionWrapper.addEventListener('mousedown', e => {

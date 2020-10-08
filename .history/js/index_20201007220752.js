@@ -275,6 +275,23 @@ searchBar.addEventListener('input', event => {
     suggestionWrapper.classList.remove('hidden')
 })
 
+suggestionWrapper.addEventListener('click', (evento) => {
+    if (evento.target.dataset.search) {
+        btnRelated.classList.remove('hidden')
+        btnRelated.classList.add('btn')
+        btnRelated.style.display = "flex";
+    }
+    //searchAndAppendGifs(evento.target.dataset.search)
+    autoComplete(evento.target.dataset.search).then((resultado) => {
+        debugger
+        btnRelated.innerHTML = '';
+        resultado.forEach((item) => {
+            let search = document.createElement('div')
+            search.innerHTML = `<div class="btn-related" data-search=${item.word}>#${item.word}</div>`
+            btnRelated.appendChild(search);
+        })
+    })
+})
 
 /* Accion sobre los botones grises: Suggestions Results*/
 
